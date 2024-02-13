@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@babel/plugin-proposal-private-property-in-object
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:ital,wght@0,300;0,400;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -29,6 +30,27 @@
   background-color: var(--color-purple);
 }
 
+/* .chart.title{
+  position:absolute;
+  left: 0;
+  right: 0;
+  top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+} */
+.chart.relative {
+  position: relative;
+}
 
+.chart .title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%; /* vertically center */
+  transform: translateY(-50%); /* adjust vertically for centering */
+  text-align: center; /* center the text */
+}
 
-
+.form-input{
+  @apply mt-1 block w-full py-2 px-3 border border-gray-200 bg-white rounded-md focus:outline-none focus:ring-indigo-500 sm:text-sm;
+}
